@@ -73,6 +73,11 @@ header {
 
 }
 
+.img-logo:hover{
+
+  rotate: -45deg;
+}
+
 .img-footer{
 
   width: 30px;
