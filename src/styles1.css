@@ -66,6 +66,7 @@ header {
   padding: 25px;
   color: white;
   text-align: center;
+  border-radius: 4px;
   background-color: #151E32;
 }
 
@@ -218,15 +219,17 @@ section{
   color: black;
   margin: 1px;
   padding: 10px;
+  border-radius: 4px;
   text-align: justify;
-  background-color: #CCC5B9;
+  background-color: #dcdcdc;
 }
 
 aside{
   color: wheat;
   text-align: center;
   padding: 10px;
-  background-color: black;
+  border-radius: 4px;
+  background-color: #0b0e0e;
 }
 
 iframe{ 
@@ -267,7 +270,8 @@ h1{ margin: 0px;}
     text-align: center;
     border-style: solid;
     border-width: 1px;
-    background-color:darkseagreen;
+    border-color: black;
+    background-color:#0b0e0e;
   }
 .bnt-detalles a{
     
@@ -300,6 +304,7 @@ footer{
   font-size: small;
   text-align: center;
   margin-top:2px;
+  border-radius: 4px;
   background-color: #151E32;;
 }
 
