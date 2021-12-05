@@ -13,12 +13,15 @@ h2{
   text-align: center;
 }
 
+ul{
+
+  width: auto;
+}
 .ruta{
 
   font-size: x-small;
 }
 aside img{
-
   width:100%;
   height:auto;
   padding: 1px;
@@ -29,7 +32,6 @@ aside img{
   clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
   padding: 0px;
   margin: 0px;
-  
 }
 
 .clip-path-c{
@@ -37,12 +39,10 @@ aside img{
   padding: 0px;
   margin: 0px;
   width: 120px;
-  
 }
 
 .clip-path-message{
   clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
-  
 }
 
 .clip-path-octagon{
@@ -52,7 +52,7 @@ aside img{
 #wrapper{ 
   width: 90%;
   margin:auto;
-  border-style: solid;
+  padding: 2px;
   background-color: black;
 }
 
@@ -97,14 +97,13 @@ header {
 
   width: 30px;
   height: 30px;
-  border: 0px;
-  margin:15px;
+  margin:5px;
 }
 
 footer a{
 
   text-decoration: none;
-  padding: 4px;
+  padding: 2px;
   color: #ffb300;
 
 }
@@ -112,48 +111,34 @@ footer a{
 footer a:hover{
 
   text-decoration: none;
-  padding: 4px;
+  padding: 2px;
   color: white;
 
 }
 
 /******** Logo Animations **************/
 .animated.flip {
-  
   backface-visibility: visible;
   animation-name: flip;
   animation-duration: 1s;
   animation-fill-mode: both;
   }
  
-  @keyframes flip {
-  0% {
+  @keyframes flip { 0% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+    animation-timing-function: ease-out;}40%{
   
-  transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
-   animation-timing-function: ease-out;
-  }
-  40% {
-  
-  transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
-  animation-timing-function: ease-out;
-  }
-  50% {
-  
-  transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
-  animation-timing-function: ease-in;
-  }
-  80% {
-  
-  transform: perspective(400px) scale3d(.95, .95, .95);
-  animation-timing-function: ease-in;
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    animation-timing-function: ease-out;}50% {
 
-  }
-  100% {
- 
-  transform: perspective(400px);
-  animation-timing-function: ease-in;
-  }
-  } 
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    animation-timing-function: ease-in; }80% {
+
+    transform: perspective(400px) scale3d(.95, .95, .95);
+    animation-timing-function: ease-in;}100% {
+
+    transform: perspective(400px);
+    animation-timing-function: ease-in;}} 
 
   .zoomIn {
       animation-name: zoomIn;
@@ -161,15 +146,11 @@ footer a:hover{
       animation-fill-mode: both;
     }
     
-    @keyframes zoomIn {
-    0% {
+    @keyframes zoomIn {0% {
         opacity: 0;
-        transform: scale3d(.3, .3, .3);
-    }
-    50% {
-    opacity: 1;
-    }
-    }
+        transform: scale3d(.3, .3, .3); }50% {
+        opacity: 1;}}
+
 /******** Logo Animations **************/
 
 
@@ -182,39 +163,26 @@ footer a:hover{
   animation-duration: 1s;
   animation-fill-mode: both;
   }
-  @-webkit-keyframes bounce {
-  0%, 20%, 53%, 80%, 100% {
-  transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-  transform: translate3d(0,0,0);
-  }
-  40%, 43% {
-  transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
-  transform: translate3d(0, -30px, 0);
-  }
-  70% {
-  transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
-  transform: translate3d(0, -15px, 0);
-  }
-  90% {
-  transform: translate3d(0,-4px,0);
-  }
-  }
-  @keyframes bounce {
-  0%, 20%, 53%, 80%, 100% {
-  transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-  transform: translate3d(0,0,0);
-  }
-  40%, 43% {
-  transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
-  transform: translate3d(0, -30px, 0);
-  }
-  70% {
-  transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
-  transform: translate3d(0, -15px, 0);
-  }
-  90% { transform: translate3d(0,-4px,0);
-  }
-  } 
+  @-webkit-keyframes bounce {0%, 20%, 53%, 80%, 100% {
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transform: translate3d(0,0,0);}40%, 43% {
+
+    transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -30px, 0);}70% {
+    transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -15px, 0);}90% {
+
+    transform: translate3d(0,-4px,0);}}
+  
+  @keyframes bounce {0%, 20%, 53%, 80%, 100% {
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transform: translate3d(0,0,0);}40%, 43% {
+
+    transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -30px, 0);} 70% {
+    transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -15px, 0); }90% { 
+    transform: translate3d(0,-4px,0);}} 
 
 
 /***********pec2************/
@@ -246,13 +214,11 @@ main{
 }
 
 section{
-  background-color: #CCC5B9;
-  
   color: black;
   margin: 1px;
   padding: 10px;
-  
-  
+  text-align: justify;
+  background-color: #CCC5B9;
 }
 
 aside{
@@ -285,32 +251,40 @@ h1{ margin: 0px;}
 
 .bnt-detalles{
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: auto auto auto auto;
   justify-content: center;
   text-align: center;
+  width:100%;
  }
 
-.bnt-detalles div{width: 100%;text-align: center;}
-  
+.bnt-detalles div{
+    
+    height: 210px;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 4px;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    background-color:darkseagreen;
+  }
 .bnt-detalles a{
-    background-color: #ffb300;
-   
-    color: white;
+    
     font-size: smaller;
     text-decoration: none;
     border-style: solid;
     border-color: black;
     border-width: 1px;
-    padding: 4px 18px 4px 18px;    
     color: black;
-    margin-bottom: 20px;
-    width: 50px;
-    height: 50px;
-}
+    border-radius: 4px;
+    padding:4px;
+    background-color: #ffb300;
+     
+    }
 
 .bnt-detalles a:hover{
   background-color: black;
-  border-radius: 10px;
+  border-radius: 4px;
   color: #ffb300;
   font-size: smaller;
   text-decoration: none;
@@ -380,22 +354,21 @@ footer{
   main{
     display:grid;
     grid-template-columns: 100%;
-    text-align: center;
+    text-align: justify;
     }
   }
 
-  
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1150px) {
  .bnt-detalles{
     display:grid;
-    grid-template-columns: 65%;
-    text-align: center;
+    grid-template-columns: auto auto;
+    text-align: justify;
     }
 }
 
 /*Navegacion Resposive*/
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 550px) {
   .nav a:not(:first-child) {display: none;}
   .nav a.icon {
     float: right;
@@ -403,7 +376,7 @@ footer{
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 550px) {
     .nav.responsive {position: relative;}
     .nav.responsive .icon {
       position: absolute;
@@ -421,11 +394,12 @@ footer{
 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 950px) {
     #wrapper {
         
         width: auto;
-        height: auto;    
+        height: auto;
+       
     }
   }
 /*# sourceMappingURL=index.615a2d4d.css.map */
