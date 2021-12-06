@@ -7,4 +7,11 @@ function menu() {
     }
   }
   
+
+  function animate() {
+    var x = document.getElementById("mysgv");
+   
+      x.className = "active";
+    
+  }
   
